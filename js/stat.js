@@ -1,0 +1,11 @@
+var CLOUD_WIDTH = 420;
+var CLOUD_HEIGHT = 270;
+var CLOUD_X = 100;
+var CLOUD_Y = 10;
+var GAP = 10;
+var FONT_GAP = 16;
+var BAR_WIDTH = 40;
+var MAX_BAR_HEIGHT = 150;
+var GAP_BETWEEN_BARS = 50;
+var MAX_BAR_Y = CLOUD_Y + GAP * 4 + FONT_GAP * 3; //координаты по у где может начинаться колонка с максимальной высотой 
+var NOTE_OF_MAX_TIME_Y = MAX_BAR_Y - GAP; //координаты по у где может начинаться запись для колонки с максимальной высотой
