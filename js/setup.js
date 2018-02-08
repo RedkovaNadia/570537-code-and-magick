@@ -15,11 +15,11 @@ var similarWizardTemplate = document.querySelector('#similar-wizard-template').c
 var numberOfWizards = 4;
 
 var generateWizardsArray = function (WIZARD_NAMES, WIZARD_SURNAMES, COAT_COLOR, EYES_COLOR) {
-  var wizard = [];
+  var wizards = [];
   for (i = 0; i < numberOfWizards; i++) {
-    wizard.push({name: WIZARD_NAMES[i] + WIZARD_SURNAMES[i], coatColor: COAT_COLOR[i], eyesColor: EYES_COLOR[i]});
+    wizards.push({name: WIZARD_NAMES[i] + WIZARD_SURNAMES[i], coatColor: COAT_COLOR[i], eyesColor: EYES_COLOR[i]});
   }
-  return wizard;
+  return wizards;
 };
 
 var renderWizard = function (wizard) {
@@ -32,9 +32,11 @@ var renderWizard = function (wizard) {
   return wizardElement;
 };
 
+var wizardsArray = generateWizardsArray (WIZARD_NAMES, WIZARD_SURNAMES, COAT_COLOR, EYES_COLOR);
+
 var fragment = document.createDocumentFragment();
-for (var i = 0; i < wizard.length; i++) {
-  fragment.appendChild(renderWizard(wizard[i]));
+for (var i = 0; i < wizardsArray.length; i++) {
+  fragment.appendChild(renderWizard(wizardsArray[i]));
 };
 similarListElement.appendChild(fragment);
 
