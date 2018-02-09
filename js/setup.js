@@ -1,5 +1,6 @@
 'use strict';
 
+var NUMBER_OF_WIZARDS = 4;
 var WIZARD_NAMES = ['Иван', 'Хуан Себастьян', 'Мария', 'Кристоф', 'Виктор', 'Юлия', 'Люпита', 'Вашингтон'];
 var WIZARD_SURNAMES = ['да Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго', 'Ирвинг'];
 var COAT_COLOR = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)', 'rgb(56, 159, 117)', 'rgb(215, 210, 55)', 'rgb(0, 0, 0)'];
@@ -16,11 +17,9 @@ var similarListElement = userDialog.querySelector('.setup-similar-list');
 
 var similarWizardTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
 
-var numberOfWizards = 4;
-
 var generateWizardsArray = function () {
   var wizards = [];
-  for (var i = 0; i < numberOfWizards; i++) {
+  for (var i = 0; i < NUMBER_OF_WIZARDS; i++) {
     var iForNames = getRandom(0, WIZARD_NAMES.length - 1);
     var iForSurnames = getRandom(0, WIZARD_SURNAMES.length - 1);
     var iForCoatColor = getRandom(0, COAT_COLOR.length - 1);
